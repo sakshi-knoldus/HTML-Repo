@@ -5,22 +5,57 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        body{
+            border:1px solid black;
+            margin:2rem;
+            padding: 1rem;
+        }
+        .navbar{
+            list-style-type:none;
+            font-size:1.2rem;
+            display:flex;
+            margin: 10px;
+        }
+        table, th,td{
+            border:1px solid rgb(165, 160, 160);
+            border-collapse:collapse;
+        }
+        th, td {
+                padding: 15px;
+                text-align: left;
+            }
+         tr:nth-child(even) {
+            background-color: rgb(192, 185, 185);
+            }
+         tr:nth-child(odd) {
+            background-color: #fff;
+            }
+        .form-btn{
+            width:6rem;
+            height:2rem;
+            background-color: orange;
+            border-radius: 4px;
+        }
+        
+    </style>
     <script src='main.js'></script>
 </head>
 <body>
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/W3Schools_logo.png" alt="w3 school" width="200px" height="150px">
-        <span>The World's Largest Webdeveloper Site</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/W3Schools_logo.png" alt="w3 school" width="250px" height="70px">
+        <span position="absolute" top="20px" title="">The World's Largest Webdeveloper Site</span>
+        <hr>
     </header>
     <section>
-        <ul  style="list-style-type:none;font-size:1.2rem;display:flex;justify-content:space-between;margin: 10px;">
-            <li><a href="#"><u>HTML</u></a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JAVASCRIPT</a></li>
-            <li><a href="#">PYTHON</a></li>
+        <ul  class="navbar">
+            <li><a href="#">HTML</a></li>&nbsp;&nbsp;
+            <li><a href="#">CSS</a></li>&nbsp;&nbsp;
+            <li><a href="#">JavaScript</a></li>&nbsp;&nbsp;
+            <li><a href="#">Python</a></li>&nbsp;&nbsp;
         </ul>
     </section>
+    <hr>
     <section>
         <h1>HTML Introduction</h1>
         <p>HTML is the standard markup language for creating web pages.</p>
@@ -47,7 +82,7 @@
 
     </section>
     <section>
-        <table width="80%" cellspacing="10px"  cellpadding="5" style="border:1px">
+        <table width="80%" cellspacing="10px"  cellpadding="5" >
             <tr>
                 <th>Start Tag</th>
                 <th>Element Contained</th>
@@ -72,25 +107,29 @@
     </section>
     <section>
         <h1>Web Browser</h1>
-        <p> the purpose</p>
-        <img src="https://www.w3schools.com/html/img_chrome.png" alt="example" height="300px" style="display:block" margin="auto auto">
+        <p> The purpose of a web browser(Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly.
+            A browser does not display the HTML tags, but uses them to determine how to display the document:</p>
+        <center>
+            <img src="https://www.w3schools.com/html/img_chrome.png" alt="example" height="300px" id="img1">
+        </center>
     </section><hr>
     <section>
         <h1>Submit a Review</h1>
-        <form action="" method="post">
+        <form action="" method="post" style="margin-top:2rem;">
             <label>Name</label>
-            <input type="text">
+            <input type="text"><br><br>
+        <label>Gender</label>
         <input type="radio" name="Gender">Male
         <input type="radio" name="Gender">Female
-        <input type="radio" name="Gender">Other<br>
+        <input type="radio" name="Gender">Other<br><br>
         <Label>Rate it</Label>
         <select>
             <option value="Very Good" selected>Very Good</option>
             <option value="Good"> Good</option>
             <option value="Poor">Poor</option>
-        </select><br>
-        <textarea row=100 columns=20 placeholder="Please add a review"></textarea><br>
-        <button>Submit</button>
+        </select><br><br>
+        <textarea row=100 columns=20 placeholder="Please add a review"></textarea><br><br>
+        <button class="form-btn">Submit</button>
         </form>
         
         
